@@ -1,0 +1,222 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: #383838;
+  }
+  .header {
+    background-color:#6662D9;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 8px 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius  : 5px;
+  }
+
+  .headerBtnGroup {
+    display: flex;
+    gap: 15px;
+  }
+  .navBtn {
+    font-size: 16px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .navBtn:hover {
+    border-bottom: 2px solid black;
+    animation:pulse;
+
+    animation-duration: 1s;
+    zoom: 1.2;
+  }
+  .logoNavBar {
+    width: 180px;
+  }
+  
+  
+  
+
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#F2F2F2;
+  }
+  
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "mainContent sidebarContent";
+    padding: 20px;
+    flex: 1 0 auto;
+  }
+  .mainContent{
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: center;
+    gap: 10px;
+    grid-area:mainContent ;
+    animation: fadeIn;
+    animation-duration: 2s;
+    
+  }
+  .sectionTitle {
+    font-size: 30px;
+    font-family: 'Gruppo', sans-serif;
+    text-align: center;
+    padding-top: 20px;
+    color: #6662D9;
+  }
+  .sectionDescription {
+    text-align: center;
+    font-size: 20px;
+    color: #6662D9;
+    font-family: 'Gruppo', sans-serif;
+    
+  }
+  .mainCardImg {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  
+  .categoryCard{
+    width: 280px;
+    height: 380px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #6662D9;
+    
+  }
+  
+  .mainCategoryCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+    color: white;
+    
+  }
+  .mainCategoryCardDescription{
+    padding: 10px;
+    color: white;
+  }
+  .categoryCard:hover{
+    border-color:#6662D9;
+    
+    animation:heartBeat;
+    animation-duration: 1s;
+    zoom: 1;
+  }
+  .sidebarContent{
+    color: white;
+    
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    grid-area: sidebarContent;
+    gap: 20px;
+    border-radius: 20px;
+    
+    
+  }
+  
+  .sidebarCardImg {
+    width: 100%;
+    border-radius: 10px;
+    
+    gap: 10px 15px;
+  }
+  
+  .sidebarCard{
+    width: 75%;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #6662D9;
+  }
+  .sidebarCard:hover{
+    border-color:#6662D9;
+    animation:pulse;
+    animation-duration: 1s;
+    zoom: 1;
+    
+  }
+  .sidebarCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+  }
+  .logoFooter{
+    width: 180px;
+
+  }
+  .footer{
+    width: 100%;
+    min-height: 40px;
+    background-color:#6662D9;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between ;
+    padding: 20px;
+    gap: 15px;
+  }
+  .footerAnchor{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    
+  }
+  .extra{
+    color: #6662D9;
+    font-family: 'Gruppo', sans-serif;
+  }
+  
+  
+  @media(max-width:630px){
+    .gridContainer{
+      grid-area: "mainContent"
+                  "sidebarContent";
+                
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 20px;
+
+    }
+    .sidebarContent{
+      min-width: auto;
+    }
+    .footerAnchor{
+      font-size: 19px;
+    }
+  }
+  @media(max-width:463px){
+    .header{
+      justify-content: center;
+    }
+    .footer{
+      justify-content: center;
+    }
+  }
